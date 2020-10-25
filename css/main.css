@@ -4,7 +4,7 @@ img {
 }
 
 html, body, .wrapper {
-    min-height: 100% !important;
+    min-height: 100%;
     height: 100%;
 }
 
@@ -603,7 +603,7 @@ button {
 
 .last-screen .wrapper {
     height: auto;
-    min-height: 1px !important;
+    min-height: 1px;
 }
 
 .last-screen .h2 {
