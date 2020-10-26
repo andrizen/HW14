@@ -4,7 +4,7 @@ img {
 }
 
 html, body, .wrapper {
-    min-height: 100%;
+    min-height: 100% !important;
     height: 100%;
 }
 
@@ -390,12 +390,14 @@ button {
     width: 23px; 
     height: 62px;
     background: url('../img/sprite.png') -10px -10px;
+    cursor: pointer;
 }
 
 .reviews .sprite6 {
     width: 23px; 
     height: 62px;
     background: url('../img/sprite.png') -53px -10px;
+    cursor: pointer;
 }
 
 .advantages .sprite7{
@@ -505,6 +507,10 @@ button {
     margin: 50px auto;
 }
 
+.slide{
+    outline: none;
+}
+
 .reviews .review-text {
     display: inline-block;
     width: calc(70% - 15px);
@@ -523,7 +529,8 @@ button {
 }
 
 .reviews .review-author {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     text-align: right;
     margin: 10px 0 auto 0;
     vertical-align: top;
@@ -603,7 +610,7 @@ button {
 
 .last-screen .wrapper {
     height: auto;
-    min-height: 1px;
+    min-height: 1px !important;
 }
 
 .last-screen .h2 {
@@ -650,4 +657,71 @@ footer {
     margin-top: 100px;
     background-color: #333;
     height: 50px;
+}
+
+.preloader{
+    --duration: 1s;
+    width: 100%;
+    height: 100%;
+    background-color: #34314c;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+
+}
+
+.preloader__content{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    --first-color: #ff7473;
+    --second-color:#ffc952;
+    --third-color:#47b8e0;
+}
+
+.preloader__first,
+.preloader__second,
+.preloader__third{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: 1s linear infinite;
+
+}
+
+.preloader__first{
+    border-bottom: 3px solid var(--first-color); 
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    animation-name: first;
+}
+
+.preloader__second{
+    border-right: 3px solid var(--second-color);
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg); 
+    animation-name: second;
+}
+
+.preloader__third{
+    border-top: 3px solid var(--third-color);
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg); 
+    animation-name: third;
+}
+
+@keyframes first{
+    0% {transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg); }
+    100% {transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg); }
+}
+
+@keyframes second{
+    0% {transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg); }
+    100% {transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg); }
+}
+
+@keyframes third{
+    0% {transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);  }
+    100% {transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg); }
 }

@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+    <div class="preloader">
+         <div class="preloader__content">
+            <div class="preloader__first"></div>
+            <div class="preloader__second"></div>
+            <div class="preloader__third"></div>
+
+         </div>
+    </div>
+
 <header>
     <div class="wrapper">
         <img src="img/logo.webp" alt="Logo Avtoparktronik" class="logo">
@@ -190,6 +207,21 @@
                 <div class="review-author"><img src="img/review1-ava.jpg" alt="" class="ava"><b>Константин</b><i>г.
                     Днепропетровск</i></div>
             </div>
+
+            <div class="slide">
+                <img src="img/review1.webp" alt="" class="main-review-img">
+                <p class="review-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="review-author"><img src="img/review1-ava.jpg" alt="" class="ava"><b>Константин</b><i>г.
+                    Cheeki Breeki</i></div>
+            </div>
+
         </div>
         <div class="arrow-right sprite6"></div>
         <!--<img src="img/arrow-right.png" alt="" class="arrow-right">-->
@@ -242,7 +274,7 @@
         </div>
     </div>
 </section>
-<seciton class="last-screen">
+<div class="last-screen">
     <div class="wrapper">
         <h2 class="h2">закажите свой видеопарктроник <span class="yellow">до конца дня</span>
             И <span class="yellow">получите в подарок</span> антибликовое стекло</h2>
@@ -264,12 +296,15 @@
             </form>
         </div>
     </div>
-</seciton>
+</div>
 <footer>
     <div class="wrapper">
-
+      
     </div>
 </footer>
+
+<script src="js/slick.js"></script>
+<script src="js/preloader.js"></script>
 <script src="lib/plugins.js"></script>
 <script>
     // 2. This code loads the IFrame Player API code asynchronously.
