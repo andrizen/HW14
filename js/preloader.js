@@ -8,9 +8,9 @@ function preloader(){
 
 	setInterval(
 		() => p.remove(),
-		parseInt(p.css('--duration')) * 1000
+		parseInt(p.css('--duration')) * 100
 		);
- 	}, 1000);
+ 	}, 100);
 });
 }
 
